@@ -9,9 +9,4 @@ let Letter = function(ltr) {
   };
 };
 
-// //Test code
-// let letter = new Letter("a");
-// letter.guessLtr("a");
-// console.log(letter.ltrReturn());
-
 module.exports = Letter;
