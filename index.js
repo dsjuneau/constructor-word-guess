@@ -5,15 +5,13 @@ let Word = require("./word");
 let inquirer = require("inquirer");
 
 let wordPool = [
-  "dilapidated",
-  "screenplay",
-  "screenwriting",
-  "hacksaws",
-  "torture",
-  "chains",
-  "gore",
-  "blood",
-  "screams"
+  "amazon",
+  "tesla",
+  "google",
+  "microsoft",
+  "qualcomm",
+  "cisco",
+  "apple"
 ];
 
 //Game loop, keeps going until the array of words is empty.
@@ -21,9 +19,10 @@ function gameLoop(arry) {
   if (arry.length === 0) {
     console.log("Game Over");
   } else {
-    let word = new Word(arry[Math.floor(Math.random() * arry.length)]);
+    let textWord = arry[Math.floor(Math.random() * arry.length)];
+    let word = new Word(textWord);
     let numberGuesses = 12;
-    arry.splice(arry.indexOf(word), 1);
+    arry.splice(arry.indexOf(textWord), 1);
     console.log(word.wordReturn());
     wordLoop(word, numberGuesses, arry);
   }
