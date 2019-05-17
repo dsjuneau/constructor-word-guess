@@ -18,7 +18,6 @@ let wordPool = [
 
 //Game loop, keeps going until the array of words is empty.
 function gameLoop(arry) {
-  console.log(arry);
   if (arry.length === 0) {
     console.log("Game Over");
   } else {
